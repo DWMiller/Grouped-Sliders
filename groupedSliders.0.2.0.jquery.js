@@ -1,3 +1,4 @@
+// Version 0.2.1
 (function($)
 {
 	$.fn.groupedSliders = function(options)
@@ -14,8 +15,6 @@
 		return this.each(function() 
 		{ // Plugin logic container
 			var $sliderGroup = $(this);
-
-			console.log($sliderGroup)
 
 			var $sliders = $sliderGroup.find(".slider");
 			$sliders.addClass(settings.startState);
@@ -140,6 +139,7 @@
 					if (Math.abs(increment) > value && increment < 0)
 					{
 						increment = value;
+						console.log('test')
 					}
 
 					if ((value + increment) >= 0 && (value + increment) <= settings.total )
@@ -150,9 +150,9 @@
 					}
 				}
 				
-				$('.slider-lock').val(function(){
+
+				$('.slider-text').val(function(){
 					var t = $(this);
-					var comp = t.attr('name')
 					var val = t.next('.slider').slider( "option", "value");
 					return val;
 				})	
@@ -160,6 +160,7 @@
 				bindSliders();
 
 			} // End balance sliders function
+			balanceSliders();
 
 			var toggleSlider = function(t)
 			{	// Clicking toggles slider bar between locked and unlocked state
@@ -189,23 +190,23 @@
 
 			var disableInputs = function() 
 			{	
-				$('.slider').slider("disable").prev('input').attr('readonly','readonly');
-				$('.slider').removeClass('unlocked');
-				$('.slider').addClass('locked');
-				$('.slider').next('span.ui-icon').addClass('ui-icon-locked');
-				$('.slider').next('span.ui-icon').removeClass('ui-icon-unlocked');
+				$sliders.slider("disable").prev('input').attr('readonly','readonly');
+				$sliders.removeClass('unlocked');
+				$sliders.addClass('locked');
+				$sliders.next('.slider-lock').addClass('ui-icon-locked');
+				$sliders.next('.slider-lock').removeClass('ui-icon-unlocked');
 
 				calculateLockedTotal();
 			}
 
 			var enableInputs = function() 
 			{
-				var slider = ('.slider')
-				$.slider("enable").prev('input').removeAttr('readonly');
-				$.removeClass('locked');
-				$.addClass('unlocked');
-				$.next('span.ui-icon').addClass('ui-icon-unlocked');
-				$.next('span.ui-icon').removeClass('ui-icon-locked');
+
+				$sliders.slider("enable").prev('input').removeAttr('readonly');
+				$sliders.removeClass('locked');
+				$sliders.addClass('unlocked');
+				$sliders.next('.slider-lock').addClass('ui-icon-unlocked');
+				$sliders.next('.slider-lock').removeClass('ui-icon-locked');
 
 				calculateLockedTotal();
 			}
