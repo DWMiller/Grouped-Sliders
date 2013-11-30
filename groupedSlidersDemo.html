@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/vader/jquery-ui.css">	
+</head>
+<body>
+	<div id="container">
+
+		<div id="sliderGroup">
+
+			<div class="slider"></div>
+			<div class="slider"></div>
+			<div class="slider"></div>
+			
+		</div>
+
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>	
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	
+	<script src="groupedSliders.0.2.0.jquery.js"></script>
+
+	<script>
+		//$('#sliderGroup').groupedSliders()
+
+		$('#sliderGroup').groupedSliders({startState:'unlocked', total: 300})
+	</script>
+</body>
+
+</html>
