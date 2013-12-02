@@ -6,11 +6,21 @@
 
 ## Instructions
 
-### Basic usage:
-This will create two sliders grouped together with default settings.
+### Dependencies:
+<ol>
+    <li>jQuery</li>
+    <li>jQueryUI - Slider Component</li>
+</ol>
 
-    <div class="slider"></div>
-    <div class="slider"></div>
+### Basic usage:
+<em>Note: This plugin will activate sliders using jQuery UI. To function properly, sliders much not be previously activated within selected items. </em>
+
+This will create two sliders grouped together with default settings.
+    
+    <div id="sliderGroup">
+        <div class="slider"></div>
+        <div class="slider"></div>
+    </div>
 
     <script>
        $('#sliderGroup').groupedSliders()
@@ -28,14 +38,16 @@ With options (using same html as above example)
 
 With bound input box and lock toggle button.
 
-    <input type="text" class="slider-text" name="slider">
-    <div class="slider"></div>
-    <span class="ui-icon ui-icon-unlocked slider-lock"></span>	            
+    <div id="sliderGroup">
+        <input type="text" class="slider-text" name="slider">
+        <div class="slider"></div>
+        <span class="ui-icon ui-icon-unlocked slider-lock"></span>	            
 
-    <input type="text" class="slider-text" name="slider2">
-    <div class="slider"></div>
-    <span class="ui-icon ui-icon-unlocked slider-lock"></span>				
-
+        <input type="text" class="slider-text" name="slider2">
+        <div class="slider"></div>
+        <span class="ui-icon ui-icon-unlocked slider-lock"></span>				
+    </div>
+    
     <script>
        $('#sliderGroup').groupedSliders(
        {
