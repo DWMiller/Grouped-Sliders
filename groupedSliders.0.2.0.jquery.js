@@ -1,4 +1,4 @@
-// Version 0.2.1
+// Version 0.2.3
 (function($)
 {
 	$.fn.groupedSliders = function(options)
@@ -120,6 +120,8 @@
 
 				$clicked.removeClass('clicked');
 
+				var sliderCount = $tempSliders.length;
+
 				while (sliderTotal != settings.total && $tempSliders.length != 0) 
 				{	
 					var rand = Math.floor((Math.random()*$tempSliders.length));
@@ -128,26 +130,45 @@
 					
 					var value = $randSlider.slider( "option", "value" );
 					
-					var increment = Math.ceil(Math.abs(sliderTotal-settings.total)/$tempSliders.length);
+					var increment = Math.ceil(Math.abs(sliderTotal-settings.total)/sliderCount);
+
+					//console.log('Value of Slider '+rand+' : ' + value)
+					//console.log('Size of Increment: ' + increment)
+
+
+
 
 					if (sliderTotal > settings.total)
 					{
-						increment *= -1;
-					}
+						if (Math.abs(increment) > value)
+						{
+							increment = value;	
+							
+							//console.log('Increment Too Big, new increment: ' + increment)
 
-				
-					if (Math.abs(increment) > value && increment < 0)
-					{
-						increment = value;
-						console.log('test')
+							$tempSliders.splice(rand,1);
+							//console.log('Slider removed, new length: ' + $tempSliders.length)
+						}
+
+						increment *= -1;
+						//console.log('Going Down: ' + increment)
 					}
 
 					if ((value + increment) >= 0 && (value + increment) <= settings.total )
 					{
+						//console.log('Final Increment is: ' + increment)
+						//console.log('Final Value is: ' + value)
+
 						value+=increment;
+
 						sliderTotal+=increment;
+
 						$randSlider.slider( "value", value );
+						//console.log('New value:' + $randSlider.slider( "option", "value" ))
+					} else {
+						//console.log('hmm')
 					}
+
 				}
 				
 

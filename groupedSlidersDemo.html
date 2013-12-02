@@ -6,6 +6,28 @@
 	<title></title>
 
 	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/vader/jquery-ui.css">	
+	<style>
+		.sliderGroup
+		{
+			width:90%;
+			margin:auto;
+		}
+
+		.slider
+		{
+			width:89%;
+		}
+
+		.slider,.slider-lock{
+			display:inline-block;
+		}
+
+		.slider-text,.slider-lock
+		{
+			max-width:5%;
+		}
+	</style>
+
 </head>
 <body>
 	<div id="container">
@@ -13,25 +35,94 @@
 		<div class="sliderGroup">
 
 
-			<input type="text" value="50" class="slider-text" name="slider">
+			<input type="text" class="slider-text" name="slider">
 			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>
 			
-			<input type="text" value="50" class="slider-text" name="slider">
+			<input type="text" class="slider-text" name="slider">
 			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>
 
-			<input type="text" value="50" class="slider-text" name="slider">
+			<input type="text" class="slider-text" name="slider">
 			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>	            
 			
-			<input type="text" value="50" class="slider-text" name="slider">
+			<input type="text" class="slider-text" name="slider">
 			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>	            
 			
-			<input type="text" value="50" class="slider-text" name="slider">
+			<input type="text" class="slider-text" name="slider">
 			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>	            
 			
-			<input type="text" value="50" class="slider-text" name="slider">
+			<input type="text" class="slider-text" name="slider">
 			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>	            
 			
-			<input type="text" value="50" class="slider-text" name="slider">
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>
+	
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>	            
+			
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>
+	
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>	            
+			
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>
+	
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>	            
+			
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>
+	
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>	            
+			
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>															
+			
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>
+	
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>	            
+			
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>
+	
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>	            
+			
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>
+	
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>	            
+			
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>															
+
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>
+	
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>	            
+			
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>
+	
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>	            
+			
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>
+	
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>	            
+			
+			<input type="text" class="slider-text" name="slider">
+			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>															
+			
+			<input type="text" class="slider-text" name="slider">
 			<div class="slider"></div><span class="ui-icon ui-icon-unlocked slider-lock"></span>
 		</div>
 
@@ -48,7 +139,7 @@
 	<script>
 		//$('#sliderGroup').groupedSliders()
 
-		$('.sliderGroup').groupedSliders({startState:'unlocked', total: 300})
+		$('.sliderGroup').groupedSliders({startState:'unlocked', total: 100})
 	</script>
 </body>
 
